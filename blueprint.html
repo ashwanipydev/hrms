@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS Execution Blueprint - BSTL Implementation</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #0ea5e9;
+            --accent: #f59e0b;
+            --text: #0f172a;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: var(--card);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+        h1, h2, h3 { color: var(--primary); margin-top: 0; }
+        h1 { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .module-box { border: 1px solid var(--border); padding: 1.5rem; border-radius: 0.75rem; background: #fafafa; }
+        .module-box h4 { margin: 0 0 0.5rem 0; color: var(--secondary); }
+        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--border); }
+        th { background-color: #f8fafc; color: var(--primary); }
+        .badge { background: #e0e7ff; color: var(--primary); padding: 0.25rem 0.5rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; }
+        .status-planned { background: #fef3c7; color: #92400e; }
+        .team-section { background: #eef2ff; padding: 1.5rem; border-radius: 0.75rem; border-left: 5px solid var(--primary); }
+        .footer { text-align: center; padding: 3rem; color: #64748b; font-size: 0.875rem; }
+        @media (max-width: 768px) { .container { padding: 0.5rem; } .card { padding: 1.5rem; } }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div style="font-weight: 700; font-size: 1.25rem;">BSTL HRMS Blueprint</div>
+        <div class="badge" style="background: white; color: var(--primary);">VERSION 1.0</div>
+    </div>
+
+    <div class="container">
+        <h1>🚀 Ready-to-Execute Blueprint</h1>
+
+        <div class="card">
+            <h2>1. Executive Summary</h2>
+            <div class="grid">
+                <div>
+                    <p><strong>Objective:</strong> Full digital HR transformation for BSTL.</p>
+                    <p><strong>Duration:</strong> 3-Year Contract Lifecycle.</p>
+                </div>
+                <div>
+                    <p><strong>Bid Ref:</strong> GEM/2026/B/7416997</p>
+                    <p><strong>Outcome:</strong> Cloud-native, secure, and integrated HRMS.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>2. HRMS Module Breakdown</h2>
+            <div class="grid">
+                <div class="module-box">
+                    <h4>Core Employee DB</h4>
+                    <p>Digital records, Org hierarchy, Multi-category staff tracking.</p>
+                </div>
+                <div class="module-box">
+                    <h4>Attendance & Leave</h4>
+                    <p>Biometric (Thumb/IRIS), BSTL Rule Engine, Real-time status.</p>
+                </div>
+                <div class="module-box">
+                    <h4>Payroll & Tax</h4>
+                    <p>Auto-calculations, TDS/PF/ESI compliance, Arrears processing.</p>
+                </div>
+                <div class="module-box">
+                    <h4>Talent & PMS</h4>
+                    <p>ATS, KPI tracking, Appraisal cycles, Onboarding workflow.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Recommended Tech Stack</h2>
+            <table>
+                <tr><th>Layer</th><th>Stack</th><th>Justification</th></tr>
+                <tr><td>Backend</td><td>Spring Boot (Java)</td><td>Enterprise security & stability for payroll.</td></tr>
+                <tr><td>Frontend</td><td>Angular 17+</td><td>Strong typing & robust RBAC.</td></tr>
+                <tr><td>Database</td><td>PostgreSQL</td><td>ACID compliance for sensitive HR data.</td></tr>
+                <tr><td>Mobile</td><td>React Native</td><td>Cross-platform consistency (<50MB).</td></tr>
+                <tr><td>DevOps</td><td>Docker & CI/CD</td><td>Standardized modular deployment.</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>4. Security & Compliance</h2>
+            <div class="team-section">
+                <ul>
+                    <li><strong>Data Localization:</strong> 100% Indian Data Centers (AWS Mumbai).</li>
+                    <li><strong>Audit:</strong> Quarterly VAPT + Yearly Penetration Testing.</li>
+                    <li><strong>Standards:</strong> ISO 27001:2022 and CERT-IN compliance.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>5. Team & Workflow (AI + Human)</h2>
+            <div class="grid">
+                <div>
+                    <h3>🤖 AI Agent Roles</h3>
+                    <ul>
+                        <li><strong>AI Analyst:</strong> Requirement extraction.</li>
+                        <li><strong>AI Architect:</strong> Schema & API design.</li>
+                        <li><strong>AI Product:</strong> User stories & features.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>👨‍💻 Human Roles</h3>
+                    <ul>
+                        <li><strong>Tech Lead:</strong> Architecture validation.</li>
+                        <li><strong>Business Analyst:</strong> Stakeholder coordination.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>6. Implementation Roadmap</h2>
+            <table>
+                <tr><th>Phase</th><th>Activity</th><th>Status</th></tr>
+                <tr><td>Phase 1</td><td>Requirement Analysis & SRS</td><td><span class="badge status-planned">PLANNED</span></td></tr>
+                <tr><td>Phase 2</td><td>Architecture & DB Design</td><td><span class="badge status-planned">PLANNED</span></td></tr>
+                <tr><td>Phase 3</td><td>Module Development & Integration</td><td><span class="badge status-planned">PLANNED</span></td></tr>
+                <tr><td>Phase 4</td><td>UAT & VAPT Audit</td><td><span class="badge status-planned">PLANNED</span></td></tr>
+                <tr><td>Phase 5</td><td>Go-Live & Transition</td><td><span class="badge status-planned">PLANNED</span></td></tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <p>Produced by Antigravity Expert Solution Team | BSTL HRMS 2026</p>
+        </div>
+    </div>
+</body>
+</html>
